@@ -2,7 +2,6 @@ import { chromium } from "playwright";
 
 export const generatePDF = async (html) => {
   const browser = await chromium.launch({
-    executablePath: process.env.CHROME_PATH || undefined,
     headless: true,
     args: [
       "--no-sandbox",
