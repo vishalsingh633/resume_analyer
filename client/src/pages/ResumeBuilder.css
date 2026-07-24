@@ -1,0 +1,210 @@
+/* Dark Theme Variables */
+:root {
+  --rb-dark-bg: #0f172a;
+  --rb-dark-surface: #1e293b;
+  --rb-dark-input-bg: #0f172a;
+  --rb-dark-border: #334155;
+  --rb-dark-border-focus: #818cf8;
+  --rb-dark-text-main: #f8fafc;
+  --rb-dark-text-muted: #94a3b8;
+  
+  --rb-primary-purple: #8b5cf6;
+  --rb-primary-purple-hover: #7c3aed;
+  --rb-success-green: #10b981;
+  --rb-success-green-hover: #059669;
+  
+  --rb-radius: 12px;
+  --rb-dark-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* Page Container */
+.rb-container.dark-theme {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--rb-dark-bg);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--rb-dark-text-main);
+}
+
+/* Header */
+.rb-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.rb-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--rb-dark-text-main);
+  margin: 0;
+}
+
+.rb-subtitle {
+  color: var(--rb-dark-text-muted);
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+/* Layout Grid */
+.rb-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .rb-grid {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+/* Dark Cards */
+.rb-card {
+  background: var(--rb-dark-surface);
+  border-radius: var(--rb-radius);
+  border: 1px solid var(--rb-dark-border);
+  box-shadow: var(--rb-dark-shadow);
+  padding: 1.75rem;
+}
+
+.rb-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: var(--rb-dark-text-main);
+  letter-spacing: -0.01em;
+}
+
+/* Form Groups & Inputs */
+.rb-form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.rb-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rb-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--rb-dark-text-muted);
+}
+
+.rb-input-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .rb-input-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rb-input,
+.rb-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--rb-dark-border);
+  border-radius: 8px;
+  background-color: var(--rb-dark-input-bg);
+  font-size: 0.95rem;
+  color: var(--rb-dark-text-main);
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.rb-input::placeholder,
+.rb-textarea::placeholder {
+  color: #64748b;
+}
+
+.rb-input:focus,
+.rb-textarea:focus {
+  outline: none;
+  border-color: var(--rb-dark-border-focus);
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+.rb-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Action Buttons */
+.rb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.rb-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Glowing Neon Purple Button */
+.rb-btn-ai {
+  background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.35);
+}
+
+.rb-btn-ai:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+}
+
+/* Glowing Green Button */
+.rb-btn-download {
+  background-color: var(--rb-success-green);
+  color: #ffffff;
+  margin-top: 1.25rem;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.rb-btn-download:hover {
+  background-color: var(--rb-success-green-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+}
+
+/* Sticky Right Panel */
+.rb-sticky-wrapper {
+  position: sticky;
+  top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* The template preview container is kept white internally so the generated PDF accurately reflects light paper */
+.rb-preview-card {
+  min-height: 600px;
+  padding: 2rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid var(--rb-dark-border);
+}
